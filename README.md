@@ -120,8 +120,8 @@ for x_pos in range(50, 201, 40):
 ```
 
 Hopefully, you can see how much easier it is to read the code using `for` and `range()`. The parameters for `x_pos` are all listed on the same line:
-- x_pos starts at `50`
-- x_pos stops at `201` (NOTE: Remember, `range` is not inclusive, so if we want `200` to be the final value, we need to specify a number greater than `200`.)
-- x_pos increases or steps by `40` on each iteration
+- `x_pos` starts at `50`
+- `x_pos` stops at `201` (NOTE: Remember, `range` is not inclusive, so if we want `200` to be the final value, we need to specify a number greater than `200`.)
+- `x_pos` increases or steps by `40` on each iteration
 
 If you are using `while` loops in your implementation, consider replacing them with `for` and `range()` functions for cleaner code.
