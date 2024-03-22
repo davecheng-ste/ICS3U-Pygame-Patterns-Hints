@@ -79,21 +79,29 @@ If you computed that Quadrant 1 required 40 pixel steps for the line grid, how d
 ## Quadrant 4: Random Colours
 This quadrant builds on Quadrant 3 by changing the colour of something as the program runs.
 
+### Generating random colours
 In this case, however, you can use the [`random.randint()`](https://www.w3schools.com/python/ref_random_randint.asp) function to generate a random integer for your colour. 
 
-Consider this code for a randomly coloured circle of radius `50` centred at `(x, y) = (100, 100)`:
+Consider this code for a randomly coloured 50x50 square with top-left corner at `(x, y) = (100, 100)`:
 
 ```python
 colour = (random.randint(0, 255), random.randint(0, 255), random.randint(0, 255))
-pygame.draw.circle(screen, colour, (100, 100), 50)
+pygame.draw.rect(screen, colour, (100, 100, 50, 50))
 ```
-
 When you run this code, why does the colour continue to change?
 
 Remember that Pygame runs inside an infinite `while` loop that goes as long as the Pygame graphics window is kept open. (This is the `while running:` line at the top of your main game loop.)
 
 Each time the `random.randint()` function is called, a new integer value is generated at random.
 
+### Drawing pixels
+A pixel is a single 1x1 square in your 800x800 grid. You can draw a 1x1 pixel by calling the `pygame.draw.rect()` then use a `width = 1` and `height = 1`. For example:
+
+```python
+pygame.draw.rect(screen, BLACK, (100, 100, 1, 1))
+```
+
+The above would draw a single black 1x1 pixel at `(x, y) = (100, 100)`.
 
 <br><br>
 
