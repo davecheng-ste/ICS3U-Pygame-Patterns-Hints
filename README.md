@@ -93,3 +93,35 @@ When you run this code, why does the colour continue to change?
 Remember that Pygame runs inside an infinite `while` loop that goes as long as the Pygame graphics window is kept open. (This is the `while running:` line at the top of your main game loop.)
 
 Each time the `random.randint()` function is called, a new integer value is generated at random.
+
+
+<br><br>
+
+
+## Other Hints
+
+### Use of `for` vs `while` for looping
+Consider these two identical programs to draw a row of circles:
+
+```python
+# Initialize x_coodinate to 50
+x_pos = 50
+
+while x_pos <= 200:
+    pygame.draw.circle(screen, BLACK, (x_pos, 100), 20)
+    x_pos += 40  # Increment x_coordinate by 40
+```
+
+And using `for` with the `range()` function:
+
+```python
+for x_pos in range(50, 201, 40):
+    pygame.draw.circle(screen, BLACK, (x_pos, 100), 20)
+```
+
+Hopefully, you can see how much easier it is to read the code using `for` and `range()`. The parameters for `x_pos` are all listed on the same line:
+- x_pos starts at `50`
+- x_pos stops at `201` (NOTE: Remember, `range` is not inclusive, so if we want `200` to be the final value, we need to specify a number greater than `200`.)
+- x_pos increases or steps by `40` on each iteration
+
+If you are using `while` loops in your implementation, consider replacing them with `for` and `range()` functions for cleaner code.
