@@ -95,7 +95,7 @@ Remember that Pygame runs inside an infinite `while` loop that goes as long as t
 Each time the `random.randint()` function is called, a new integer value is generated at random.
 
 ### Drawing pixels
-A pixel is a single 1x1 square in your 800x800 grid. You can draw a 1x1 pixel by calling the `pygame.draw.rect()` then use a `width = 1` and `height = 1`. For example:
+A pixel is a single 1x1 square in your grid. You can draw a 1x1 pixel by calling the `pygame.draw.rect()` then use a `width = 1` and `height = 1`. For example:
 
 ```python
 pygame.draw.rect(screen, BLACK, (100, 100, 1, 1))
